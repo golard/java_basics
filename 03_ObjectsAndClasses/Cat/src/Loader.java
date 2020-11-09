@@ -32,5 +32,12 @@ public class Loader
             cat.meow();
         }
         System.out.println(cat.getStatus());
+
+
+        System.out.println("Вес съеденного корма " + cat3.totalFoodWeight(150.0));
+        //System.out.println("Вес съеденного корма " + cat3.totalFoodWeight);
+
+        System.out.println("Я сходила в туалет и стала легче на " + cat3.pee(100.0) + " грамм");
+        System.out.println("Вес составляет " + cat3.weight);
     }
 }
