@@ -25,8 +25,7 @@ public class Cat
     }
 
     public void feed(Double amount) {
-        weight = weight + amount;
-        totalFoodWeight(amount);
+        totalFoodWeight = totalFoodWeight + amount;  // увеличивается на введенное количество
     }
 
     public void drink(Double amount) {
@@ -37,8 +36,7 @@ public class Cat
         return weight;
     }
 
-    public double totalFoodWeight (Double amount) {       //Сумма общего корма кота
-        totalFoodWeight = totalFoodWeight + amount;
+    public double getTotalFoodWeight (Double amount) {       //Сумма общего корма кота
         return totalFoodWeight;
     }
 
