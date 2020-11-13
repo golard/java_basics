@@ -7,7 +7,6 @@ public class Cat
     private double minWeight;
     private double maxWeight;
     public double totalFoodWeight;
-    public double pee;
 
 
     public Cat() {
@@ -16,7 +15,7 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         totalFoodWeight = 0;
-        pee = 100.0;
+       // pee = 100.0;
     }
 
     public void meow() {
@@ -25,7 +24,8 @@ public class Cat
     }
 
     public void feed(Double amount) {
-        totalFoodWeight = totalFoodWeight + amount;  // увеличивается на введенное количество
+        weight = weight + amount;
+        totalFoodWeight = totalFoodWeight + amount;
     }
 
     public void drink(Double amount) {
@@ -36,13 +36,13 @@ public class Cat
         return weight;
     }
 
-    public double getTotalFoodWeight (Double amount) {       //Сумма общего корма кота
+    public Double getTotalFoodWeight () {       //Сумма общего корма кота
         return totalFoodWeight;
     }
 
-    public double pee (Double amount) {
-        weight = weight - pee;
-        return pee;
+    public Double pee () {
+        weight = weight - 100.0;
+        return weight;
     }
 
     public String getStatus() {
