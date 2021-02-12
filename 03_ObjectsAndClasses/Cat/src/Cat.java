@@ -7,7 +7,7 @@ public class Cat
     private double minWeight;
     private double maxWeight;
     public double totalFoodWeight;
-
+    static int count;
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -58,5 +58,17 @@ public class Cat
         else {
             return "Playing";
         }
+    }
+
+    static int count () {
+        if(cat1.getStatus = true) {
+            count += 1;
+        }
+        if(cat1.getStatus == "Dead" || cat1.getStatus == "Exploded") {
+            count -= 1;
+        }
+    }
+    static int getCount() {
+        return count;
     }
 }
