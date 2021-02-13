@@ -60,11 +60,11 @@ public class Cat
         }
     }
 
-    static int count () {
-        if(cat1.getStatus = true) {
+    public static int count () {
+        if(getStatus().equals ("Sleeping") || getStatus().equals("Playing")) {
             count += 1;
         }
-        if(cat1.getStatus == "Dead" || cat1.getStatus == "Exploded") {
+        if(getStatus().equals("Dead")|| getStatus.equals("Exploded")) {
             count -= 1;
         }
     }
