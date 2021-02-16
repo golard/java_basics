@@ -1,3 +1,4 @@
+import java.io.Serializable;
 
 public class Cat
 {
@@ -9,7 +10,8 @@ public class Cat
     public double totalFoodWeight;
     static int count;
 
-    public Cat() {
+    public Cat()
+    {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
@@ -26,6 +28,12 @@ public class Cat
     public void feed(Double amount) {
         weight = weight + amount;
         totalFoodWeight = totalFoodWeight + amount;
+        if(weight < maxWeight) {
+            count = count -1;
+        }
+        else if(weight > maxWeight) {
+            count = count +1;
+        }
     }
 
     public void drink(Double amount) {
@@ -61,13 +69,9 @@ public class Cat
     }
 
     public static int count () {
-        if(getStatus().equals ("Sleeping") || getStatus().equals("Playing")) {
-            count += 1;
-        }
-        if(getStatus().equals("Dead")|| getStatus.equals("Exploded")) {
-            count -= 1;
-        }
+        return count;
     }
+
     static int getCount() {
         return count;
     }

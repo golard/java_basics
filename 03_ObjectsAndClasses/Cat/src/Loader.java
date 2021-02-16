@@ -1,5 +1,6 @@
 import java.net.SocketOption;
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class Loader
 {
@@ -33,7 +34,7 @@ public class Loader
         }
         System.out.println(cat.getStatus());*/
 
-        System.out.println("Вторая кошка: " + cat1.getWeight());
+     /*   System.out.println("Вторая кошка: " + cat1.getWeight());
 
         cat1.feed(150.0);
 
@@ -46,7 +47,14 @@ public class Loader
         System.out.println("Вторая кошка поела и теперь ее вес "    + cat1.getWeight() + " грамм.");
 
         cat1.pee();
-        System.out.println("Вес составляет " + cat1.getWeight()     + " грамм.");
+        System.out.println("Вес составляет " + cat1.getWeight()     + " грамм.");*/
+
+        System.out.println("Первая кошка: " + cat.getWeight());
+        System.out.println("Вторая кошка: " + cat1.getWeight());
+        System.out.println("Третья кошка: " + cat2.getWeight());
+        cat1.feed(9000.0);
+        System.out.println("Вторая кошка: " + cat1.getStatus());
+        System.out.println("Всего осталось кошек: " + cat.getCount());
 
     }
 }
