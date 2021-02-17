@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class Loader
 {
     public static void main(String[] args) {
-        Cat cat = new Cat();
+/*        Cat cat = new Cat();
         Cat cat1 = new Cat();
         Cat cat2 = new Cat();
         Cat cat3 = new Cat();
-        Cat cat4 = new Cat();
+        Cat cat4 = new Cat();*/
 
 /*      System.out.println("Первая кошка: " + cat.getWeight());
         System.out.println("Вторая кошка: " + cat1.getWeight());
@@ -49,12 +49,27 @@ public class Loader
         cat1.pee();
         System.out.println("Вес составляет " + cat1.getWeight()     + " грамм.");*/
 
-        System.out.println("Первая кошка: " + cat.getWeight());
+/*        System.out.println("Первая кошка: " + cat.getWeight());
         System.out.println("Вторая кошка: " + cat1.getWeight());
         System.out.println("Третья кошка: " + cat2.getWeight());
         cat1.feed(9000.0);
         System.out.println("Вторая кошка: " + cat1.getStatus());
         System.out.println("Всего осталось кошек: " + cat.getCount());
+        cat.feed(9000.0);
+        System.out.println("Первая кошка: " + cat.getStatus());
+        System.out.println("Всего осталось кошек: " + cat.getCount());*/
+
+        Cat cat = new Cat();
+        Cat cat1 = new Cat();
+        Cat cat2 = new Cat();
+        Cat cat3 = new Cat();
+        Cat cat4 = new Cat();
+        System.out.println(Cat.getCount());
+        cat.feed(5.0);
+        cat.feed(5.0);
+        cat.feed(9000.0);
+        cat.feed(9000.0);
+        System.out.println(Cat.getCount());
 
     }
 }

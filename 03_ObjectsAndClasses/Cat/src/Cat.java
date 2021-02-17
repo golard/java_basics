@@ -17,7 +17,9 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         totalFoodWeight = 0;
-       // pee = 100.0;
+        // pee = 100.0;
+        count++;
+
     }
 
     public void meow() {
@@ -26,13 +28,13 @@ public class Cat
     }
 
     public void feed(Double amount) {
-        weight = weight + amount;
-        totalFoodWeight = totalFoodWeight + amount;
         if(weight < maxWeight) {
-            count = count -1;
+            weight = weight + amount;
+            System.out.println("Кошка поела:" + weight);
+            if (weight > maxWeight) {
+                count--;
         }
-        else if(weight > maxWeight) {
-            count = count +1;
+
         }
     }
 
