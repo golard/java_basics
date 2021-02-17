@@ -34,7 +34,6 @@ public class Cat
             if (weight > maxWeight) {
                 count--;
         }
-
         }
     }
 
