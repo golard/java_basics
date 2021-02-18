@@ -70,6 +70,8 @@ public class Loader
         cat.feed(9000.0);
         cat.feed(9000.0);
         System.out.println(Cat.getCount());
+        System.out.println("У кошки " + Cat.COUNT_EYES + " глазa");
+
 
     }
 }

@@ -2,13 +2,16 @@ import java.io.Serializable;
 
 public class Cat
 {
+    public static final int  COUNT_EYES = 2;
+    public static final double  MAX_WEIGHT = 10000.0;
+    public static final double  MIN_WEIGHT = 1000.0;
     private double originWeight;
     public double weight;
-
     private double minWeight;
     private double maxWeight;
     public double totalFoodWeight;
     static int count;
+
 
     public Cat()
     {
@@ -28,12 +31,12 @@ public class Cat
     }
 
     public void feed(Double amount) {
-        if(weight < maxWeight) {
+        if(weight < maxWeight) {                    //Если вес кошки меньше допустимого, то покормить еще. => Count++
             weight = weight + amount;
             System.out.println("Кошка поела:" + weight);
-            if (weight > maxWeight) {
+            if (weight > maxWeight) {               //Если вес кошки превышает, то кошка умирает. => Count--
                 count--;
-        }
+            }
         }
     }
 
