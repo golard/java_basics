@@ -11,6 +11,7 @@ public class Cat
     private double maxWeight;
     public double totalFoodWeight;
     static int count;
+    private boolean flag;
 
 
     public Cat()
@@ -20,44 +21,65 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         totalFoodWeight = 0;
-        // pee = 100.0;
+        //pee = 100.0;
+        flag = true;
         count++;
-
     }
 
-    public void meow() {
-        weight = weight - 1;
-        System.out.println("Meow");
-    }
-
-    public void feed(Double amount) {
-        if(weight < maxWeight) {                    //Если вес кошки меньше допустимого, то покормить еще. => Count++
-            weight = weight + amount;
-            System.out.println("Кошка поела:" + weight);
-            if (weight > maxWeight) {               //Если вес кошки превышает, то кошка умирает. => Count--
-                count--;
-            }
+    public void meow()
+    {
+        if(flag) {
+            weight = weight - 1;
+            System.out.println("Meow");
+        }
+        else {
+            System.out.println("Кошка мертва, она боьльше не может мяукать");
         }
     }
 
-    public void drink(Double amount) {
-        weight = weight + amount;
+    public void feed(Double amount)
+    {
+        if(weight < maxWeight) {                    //Если вес кошки меньше допустимого, то покормить еще. => Count++
+            weight = weight + amount;
+            System.out.println("Кошка поела:" + weight);
+        }
+
+            else if (weight > maxWeight) {
+                System.out.println("Кошка мертва, она не может больше есть");
+                count--;
+            }
+            //if (weight > maxWeight) {               //Если вес кошки превышает, то кошка умирает. => Count--
+            }
+
+
+    public void drink(Double amount)
+    {
+        if(flag) {
+            weight = weight + amount;
+        }
+        else {
+            System.out.println("Кошка мертва, она больше не может пить");
+        }
     }
 
-    public Double getWeight() {
+    public Double getWeight()
+    {
         return weight;
     }
 
-    public Double getTotalFoodWeight () {       //Сумма общего корма кота
+    public Double getTotalFoodWeight ()
+    {       //Сумма общего корма кота
         return totalFoodWeight;
     }
 
-    public Double pee () {
+    public Double pee ()
+    {
         weight = weight - 100.0;
         return weight;
     }
 
-    public String getStatus() {
+    public String getStatus()
+    {
         if(weight < minWeight) {
             return "Dead";
         }
@@ -72,11 +94,13 @@ public class Cat
         }
     }
 
-    public static int count () {
+    public static int count ()
+    {
         return count;
     }
 
-    static int getCount() {
+    static int getCount()
+    {
         return count;
     }
 }
