@@ -31,7 +31,6 @@ public class Cat
         if ((weight > minWeight) && (weight < maxWeight))
             this.weight = weight;
     }
-
     public void meow()
     {
         if(flag) {
