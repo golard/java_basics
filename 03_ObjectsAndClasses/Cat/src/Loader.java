@@ -73,5 +73,11 @@ public class Loader
         System.out.println("У кошки " + Cat.COUNT_EYES + " глазa");
 
 
+        private static Cat getKitten(Double weight)
+        {
+            System.out.println(getKitten.Cat());
+        }
+
+
     }
 }

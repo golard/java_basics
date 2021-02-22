@@ -1,10 +1,9 @@
-import java.io.Serializable;
-
 public class Cat
 {
     public static final int  COUNT_EYES = 2;
     public static final double  MAX_WEIGHT = 10000.0;
     public static final double  MIN_WEIGHT = 1000.0;
+    public static final double WEIGHT = 1100.0;
     private double originWeight;
     public double weight;
     private double minWeight;
@@ -24,6 +23,12 @@ public class Cat
         //pee = 100.0;
         flag = true;
         count++;
+    }
+
+    public Cat (double weight)
+    {
+        this();
+        this.weight = weight;
     }
 
     public void meow()
